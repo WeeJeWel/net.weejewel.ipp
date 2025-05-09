@@ -1,0 +1,28 @@
+{
+  "actions": [
+    {
+      "id": "print-text",
+      "title": {
+        "en": "Print Text"
+      },
+      "titleFormatted": {
+        "en": "Print [[text]]"
+      },
+      "hint": {
+        "en": "This text will be printed on paper. Please use only ASCII, so no Emoji or special characters."
+      },
+      "args": [
+        {
+          "title": {
+            "en": "Text"
+          },
+          "type": "text",
+          "name": "text",
+          "placeholder": {
+            "en": "Lorem ipsum dolor sit amet."
+          }
+        }
+      ]
+    }
+  ]
+}

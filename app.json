@@ -1,0 +1,109 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "net.weejewel.ipp",
+  "version": "1.0.0",
+  "compatibility": ">=12.1.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "HomeyPrint"
+  },
+  "description": {
+    "en": "Print text on paper."
+  },
+  "brandColor": "#284B43",
+  "category": [
+    "internet"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Emile Nijssen",
+    "email": "emile@athom.nl"
+  },
+  "support": "mailto:emile@emile.nl",
+  "flow": {
+    "actions": [
+      {
+        "id": "print-text",
+        "title": {
+          "en": "Print Text"
+        },
+        "titleFormatted": {
+          "en": "Print [[text]]"
+        },
+        "hint": {
+          "en": "This text will be printed on paper. Please use only ASCII, so no Emoji or special characters."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ipp"
+          },
+          {
+            "title": {
+              "en": "Text"
+            },
+            "type": "text",
+            "name": "text",
+            "placeholder": {
+              "en": "Lorem ipsum dolor sit amet."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Printer"
+      },
+      "class": "other",
+      "capabilities": [],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "discovery": "ipp",
+      "images": {
+        "small": "/drivers/ipp/assets/images/small.png",
+        "large": "/drivers/ipp/assets/images/large.png",
+        "xlarge": "/drivers/ipp/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "ipp"
+    }
+  ],
+  "discovery": {
+    "ipp": {
+      "type": "mdns-sd",
+      "mdns-sd": {
+        "name": "ipp",
+        "protocol": "tcp"
+      },
+      "id": "{{txt.uuid}}"
+    }
+  }
+}

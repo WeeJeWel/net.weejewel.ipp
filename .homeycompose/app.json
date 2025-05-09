@@ -1,0 +1,30 @@
+{
+  "id": "net.weejewel.ipp",
+  "version": "1.0.0",
+  "compatibility": ">=12.1.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "HomeyPrint"
+  },
+  "description": {
+    "en": "Print text on paper."
+  },
+  "brandColor": "#284B43",
+  "category": [
+    "internet"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Emile Nijssen",
+    "email": "emile@athom.nl"
+  },
+  "support": "mailto:emile@emile.nl"
+}
